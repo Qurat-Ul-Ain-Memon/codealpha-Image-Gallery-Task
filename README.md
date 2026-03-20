@@ -25,14 +25,13 @@ web dev image gallery/
 ```
 
 🚀 Getting Started
-To run this project locally:
+- To run this project locally:
 
 Clone or download the repository
 - Open the project folder
 - Run index.html in your browser
   
-🌍 Live Demo
-- (Add your GitHub Pages link here)
+- 🌍 **Live Demo:** [View Project](https://qurat-ul-ain-memon.github.io/codealpha-Image-Gallery-Task/)
 
 🛠️ Technologies Used
 - HTML5
