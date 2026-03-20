@@ -1,0 +1,273 @@
+/* =======================
+   GLOBAL STYLES
+======================= */
+body{
+  margin:0;
+  font-family:'Poppins',sans-serif;
+  background:#121212;
+  color:white;
+  text-align:center;
+}
+
+/* =======================
+   LIGHT MODE
+======================= */
+body.light-mode{
+  background:white;
+  color:black;
+}
+
+body.light-mode .card{
+  background:#f0f0f0;
+}
+
+body.light-mode .buttons button{
+  background:#ddd;
+  color:black;
+}
+
+body.light-mode footer{
+  background:#eee;
+}
+
+/* =======================
+   HEADER
+======================= */
+header{
+  background:linear-gradient(to right,#667eea,#764ba2);
+  padding:20px;
+}
+
+/* =======================
+   BUTTONS
+======================= */
+.buttons{
+  margin:20px;
+}
+
+.buttons button{
+  padding:10px 20px;
+  margin:5px;
+  border:none;
+  border-radius:25px;
+  background:#333;
+  color:white;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.buttons button:hover{
+  background:#667eea;
+  transform:scale(1.05);
+}
+
+.active{
+  background:#667eea;
+}
+
+/* =======================
+   SEARCH BOX
+======================= */
+.search-box input{
+  padding:10px;
+  width:60%;
+  border-radius:20px;
+  border:none;
+  margin:10px;
+}
+
+/* =======================
+   GALLERY GRID
+======================= */
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:15px;
+  padding:20px;
+}
+
+/* =======================
+   CARD DESIGN
+======================= */
+.card{
+  background:#1e1e1e;
+  padding:10px;
+  border-radius:10px;
+  box-shadow:0 4px 10px rgba(0,0,0,0.5);
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:translateY(-5px);
+}
+
+/* =======================
+   CARD IMAGE
+======================= */
+.card img{
+  width:100%;
+  height:200px;
+  object-fit:cover;
+  border-radius:10px;
+  cursor:pointer;
+  transition:0.4s;
+}
+
+.card img:hover{
+  transform:scale(1.05);
+  box-shadow:0 0 15px #667eea;
+}
+
+.card p{
+  margin-top:10px;
+  font-size:14px;
+}
+
+/* =======================
+   LIGHTBOX
+======================= */
+#lightbox{
+  display:none;
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.9);
+  align-items:center;
+  justify-content:center;
+  flex-direction:column;
+}
+
+#lightbox img{
+  max-width:70%;
+  max-height:60%;
+}
+
+/* TEXT INSIDE LIGHTBOX */
+.lightbox-text{
+  margin-top: 15px;
+  text-align: center;
+}
+.lightbox-text h2{
+  margin:  5px 0;
+}
+.lightbox-text p{
+  font-size: 14px;
+  opacity: 0.8;
+}
+/*CLOSE BUTTON */
+.close{
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 40px;
+  cursor: pointer;
+}
+/* NAVIGATION BUTTON */
+.prev,
+.next{
+  position:absolute;
+  top:50%;
+  font-size:40px;
+  background:none;
+  border:none;
+  color:white;
+  cursor:pointer;
+}
+
+.prev{
+  left:30px;
+}
+.prev::after{
+  content:"❮";
+}
+
+.next{
+  right:30px;
+}
+.next::after{
+  content:"❯";
+}
+
+/* =======================
+   TOGGLE BUTTON
+======================= */
+.toggle{
+  margin:10px;
+  cursor:pointer;
+}
+
+/* =======================
+   TOGGLE SWITCH
+======================= */
+.switch{
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 30px;
+  margin: 10px;
+}
+
+.switch input{
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider{
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #ccc;
+  border-radius: 30px;
+  transition: 0.4s;
+}
+
+.slider::before{
+  position: absolute;
+  content: "";
+  height: 24px;
+  width: 24px;
+  left: 3px;
+  bottom: 3px;
+  background: white;
+  border-radius: 50%;
+  transition: 0.4s;
+}
+.slider::after{
+  content:"🌙";
+  position:absolute;
+  left:8px;
+  top:5px;
+  font-size:14px;
+}
+
+.switch input:checked + .slider::after{
+  content:"☀️";
+  left:35px;
+}
+
+/* ACTIVE STATE */
+.switch input:checked + .slider{
+  background: #667eea;
+}
+
+.switch input:checked + .slider::before{
+  transform: translateX(30px);
+}
+
+footer {
+  width: 100%;               
+  padding: 10px 0;           
+  background: #333;          
+  color: #fff;               
+  text-align: center;       
+  box-sizing: border-box;    
+  clear: both;            
+  margin-top: 20px;          
+}
+

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Image Gallery</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Responsive Image Gallery</h1>
+        <p>Featuring Lightbox, Filters & Search Functionality</p>
+    </header>
+
+    <label class="switch">
+        <input type="checkbox" onclick="toggleMode()">
+        <span class="slider"></span>
+    </label>
+
+    <div class="search-box">
+        <input type="text" placeholder="Search..." onkeyup="searchImages(this.value)">
+    </div>
+
+    <div class="buttons">
+        <button onclick="filterImages('all')" class="active">All</button>
+        <button onclick="filterImages('coding')">Coding</button>
+        <button onclick="filterImages('design')">Design</button>
+        <button onclick="filterImages('tech')">Tech</button>
+    </div>
+
+    <!-- =======================
+         GALLERY
+    ======================= -->
+    <div class="gallery">
+        <div class="card image coding" data-title="Embedded System Hardware"
+            data-desc="A close-up view of a circuit board showcasing modern embedded system technology and hardware design.">
+            <img src="Images/code1.jpg" onclick="openLightbox(this)">
+            <p>Embedded System Hardware</p>
+        </div>
+
+        <div class="card image coding" data-title="Frontend Development"
+            data-desc="Building interactive user interfaces using modern HTML, CSS, and JavaScript.">
+            <img src="Images/code2.jpg" onclick="openLightbox(this)">
+            <p>Frontend Development</p>
+        </div>
+
+        <div class="card image design" data-title="UI/UX Design"
+            data-desc="Designing modern and user-friendly interfaces with focus on user experience.">
+            <img src="Images/ui1.jpg" onclick="openLightbox(this)">
+            <p>UI/UX Design</p>
+        </div>
+
+        <div class="card image coding" data-title="JavaScript Programming"
+            data-desc="Implementing dynamic and interactive functionality using JavaScript.">
+            <img src="Images/code3.jpg" onclick="openLightbox(this)">
+            <p>JavaScript Programming</p>
+        </div>
+
+        <div class="card image design" data-title="Responsive Web Layout"
+            data-desc="Creating responsive website layouts that adapt across all screen sizes.">
+            <img src="Images/ui2.jpg" onclick="openLightbox(this)">
+            <p>Responsive Web Layout</p>
+        </div>
+
+        <div class="card image tech" data-title="Tech Workspace"
+            data-desc="A productive workspace setup for coding and development tasks.">
+            <img src="Images/tec1.jpg" onclick="openLightbox(this)">
+            <p>Tech Workspace</p>
+        </div>
+
+        <div class="card image tech" data-title="Coding Environment"
+            data-desc="A complete development environment with essential tools and software.">
+            <img src="Images/tec2.jpg" onclick="openLightbox(this)">
+            <p>Coding Environment</p>
+        </div>
+
+        <div class="card image tech" data-title="Creative Workspace"
+            data-desc="A creative development setup combining design and coding tools.">
+            <img src="Images/code4.jpg" onclick="openLightbox(this)">
+            <p>Creative Workspace</p>
+        </div>
+
+        <div class="card image tech" data-title="Minimal Setup"
+            data-desc="A clean and minimal setup for focused and distraction-free coding.">
+            <img src="Images/desk1.jpg" onclick="openLightbox(this)">
+            <p>Minimal Setup</p>
+        </div>
+
+        <div class="card image tech" data-title="Developer Workstation"
+            data-desc="A professional multi-screen setup used for advanced development work.">
+            <img src="Images/desk2.jpg" onclick="openLightbox(this)">
+            <p>Developer Workstation</p>
+        </div>
+    </div>
+
+    <!-- =======================
+         LIGHTBOX
+    ======================= -->
+    <div id="lightbox">
+        <span class="close" onclick="closeLightbox()">&times;</span>
+        <button class="prev" onclick="changeImage(-1)"></button>
+        <img id="lightbox-img">
+
+        <div class="lightbox-text">
+            <h2 id="img-title"></h2>
+            <p id="img-desc"></p>
+        </div>
+
+        <button class="next" onclick="changeImage(1)"></button>
+    </div>
+
+    <!-- =======================
+         FOOTER
+    ======================= -->
+    <footer>
+        <p>© 2026 | Designed by Qurat-Ul-Ain Memon</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
